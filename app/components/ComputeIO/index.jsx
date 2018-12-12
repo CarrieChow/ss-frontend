@@ -33,19 +33,29 @@
 import React from 'react';
 
 export function Input(props) {
-  return <div />;
+  return (
+    <input name="description" type="text" onChange="{props.value = this.value}"/>
+  );
 }
 
 export function Button(props) {
-  return <div />;
+  return (
+    <button type="button" onclick="isClosed(props.value)">Compute Result</button>
+  );
 }
 
 export function Output(props) {
-  return <div />;
+  return (
+    <div>{props.value}</div>
+  );
 }
 
 export function isClosed(str) {
-  return false;
+  if (str.charAt(0) === "^" && str.charAt(str.length-1) == "$") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 export class ComputeIO extends React.Component {
