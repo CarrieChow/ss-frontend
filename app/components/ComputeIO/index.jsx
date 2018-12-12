@@ -53,11 +53,12 @@ export function Output(props) {
 }
 
 export function isClosed(str) {
-  if (str.charAt(0) === "^" && str.charAt(str.length-1) == "$") {
-    return true;
-  } else {
-    return false;
-  }
+//   if (str.charAt(0) === "^" && str.charAt(str.length-1) == "$") {
+//     return true;
+//   } else {
+//     return false;
+//   }
+  return false;
 }
 
 export class ComputeIO extends React.Component {
