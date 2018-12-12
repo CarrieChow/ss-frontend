@@ -34,15 +34,14 @@ import React from 'react';
 
 export function Input(props) {
   return (
-    //<input type="text" value={this.state.value} />
-    <input type="text" />
+    <input type="text" value={this.state.value} />
   );
 }
 
 export function Button(props) {
   return (
     //<button type="button" onClick={isClosed(props.state.value)}>Compute Result</button>
-    <button type="button" onClick=alert("Click")>Compute Result</button>
+    <button type="button" onClick={function() { alert("Value: " + props.state.value);}}>Compute Result</button>
   );
 }
 
