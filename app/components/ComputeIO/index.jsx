@@ -34,14 +34,14 @@ import React from 'react';
 
 export function Input(props) {
   return (
-    <input name="description" type="text" onChange={() => alert(this.state.value)} />
+    <input name="description" type="text" value={this.state.value} onChange={() => alert(this.state.value)} />
   );
 }
 
 export function Button(props) {
   return (
     //<button type="button" onClick={isClosed(props.state.value)}>Compute Result</button>
-    <button type="button" onclick="isClosed(props.value)">Compute Result</button>
+    <button type="button" onClick="isClosed(props.value)">Compute Result</button>
   );
 }
 
@@ -62,6 +62,8 @@ export function isClosed(str) {
 
 export class ComputeIO extends React.Component {
   render() {
+//     const userStr = '';
+    
     return (
       <section>
         <Input />
