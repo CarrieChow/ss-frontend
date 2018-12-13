@@ -34,14 +34,15 @@ import React from 'react';
 
 export function Input(props) {
   return (
-    <input type="text" value={this.state.value} />
+//     <input type="text" value={this.state.value} />
+    <input name="description" type="text" onChange="{props.value = this.value}"/>
   );
 }
 
 export function Button(props) {
   return (
     //<button type="button" onClick={isClosed(props.state.value)}>Compute Result</button>
-    <button type="button" onClick={function() { alert("Value: " + props.state.value);}}>Compute Result</button>
+    <button type="button" onclick="isClosed(props.value)">Compute Result</button>
   );
 }
 
@@ -53,12 +54,11 @@ export function Output(props) {
 }
 
 export function isClosed(str) {
-//   if (str.charAt(0) === "^" && str.charAt(str.length-1) == "$") {
-//     return true;
-//   } else {
-//     return false;
-//   }
-  return false;
+  if (str.charAt(0) === "^" && str.charAt(str.length-1) == "$") {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 export class ComputeIO extends React.Component {
