@@ -34,8 +34,7 @@ import React from 'react';
 
 export function Input(props) {
   return (
-//     <input type="text" value={this.state.value} />
-    <input name="description" type="text" onChange="{props.value = this.value}"/>
+    <input name="description" type="text" onChange={() => alert(this.state.value)} />
   );
 }
 
