@@ -32,9 +32,10 @@
  */
 import React from 'react';
 
+const text = this._text.value;
+
 function handleBtnClick() {
   return (
-    const text = this._text.value;
     let result = isClosed(text);
   );
 }
