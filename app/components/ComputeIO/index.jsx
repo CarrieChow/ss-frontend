@@ -32,35 +32,38 @@
  */
 import React from 'react';
 
-function handleBtnClick() {
-  render() {
-    const text = this._text.value;
-    return (
-      let result = isClosed(text);
-    );
-  }
-}
+// function handleBtnClick() {
+//   render() {
+//     const text = this._text.value;
+//     return (
+//       let result = isClosed(text);
+//     );
+//   }
+// }
 
 export function Input(props) {
   return (
-    <input type="text" ref={input => this._text = input}/>
+//     <input type="text" ref={input => this._text = input}/>
+    <input type="text" />
   );
 }
 
 export function Button(props) {
   return (
-    <button type="button" onClick={this.handleBtnClick}>Compute Result</button>
+//     <button type="button" onClick={this.handleBtnClick}>Compute Result</button>
+    <button type="button">Compute Result</button>
   );
 }
 
 export function Output(props) {
   return (
-    <div>{result}</div>
+//     <div>{result}</div>
+    <div>Result</div>
   );
 }
 
 export function isClosed(str) {
-  return "Text: " + str;
+  return false;
 //   if (str.charAt(0) === "^" && str.charAt(str.length-1) == "$") {
 //     return true;
 //   } else {
