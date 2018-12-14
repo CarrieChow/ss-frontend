@@ -32,12 +32,13 @@
  */
 import React from 'react';
 
-const text = this._text.value;
-
 function handleBtnClick() {
-  return (
-    let result = isClosed(text);
-  );
+  render() {
+    const text = this._text.value;
+    return (
+      let result = isClosed(text);
+    );
+  }
 }
 
 export function Input(props) {
