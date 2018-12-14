@@ -32,30 +32,36 @@
  */
 import React from 'react';
 
+function handleBtnClick() {
+  const text = this._text.value;
+  let result = isClosed(text);
+}
+
 export function Input(props) {
   return (
-    <input name="description" type="text" value={this.state.value} />
+    <input type="text" ref={input => this._text = input}/>
   );
 }
 
 export function Button(props) {
   return (
-    <button type="button" onClick="isClosed(props.state.value)">Compute Result</button>
+    <button type="button" onClick={this.handleBtnClick}>Compute Result</button>
   );
 }
 
 export function Output(props) {
   return (
-    <div>Output</div>
+    <div>{result}</div>
   );
 }
 
 export function isClosed(str) {
-  if (str.charAt(0) === "^" && str.charAt(str.length-1) == "$") {
-    return true;
-  } else {
-    return false;
-  }
+  return "Text: " + str;
+//   if (str.charAt(0) === "^" && str.charAt(str.length-1) == "$") {
+//     return true;
+//   } else {
+//     return false;
+//   }
 }
 
 export class ComputeIO extends React.Component {
